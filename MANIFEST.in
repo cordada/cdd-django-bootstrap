@@ -1,0 +1,12 @@
+# Python Source distribution Manifest
+#
+# Note: Setuptools will use this file if the option 'include_package_data' is enabled.
+#
+# Documentation:
+# - https://packaging.python.org/guides/using-manifest-in/
+# - https://setuptools.readthedocs.io/en/latest/userguide/datafiles.html
+
+recursive-include cordada *.css
+recursive-include cordada *.js
+recursive-include cordada *.map
+recursive-include cordada *.py
