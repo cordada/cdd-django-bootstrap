@@ -6,7 +6,7 @@
 # - https://packaging.python.org/guides/using-manifest-in/
 # - https://setuptools.readthedocs.io/en/latest/userguide/datafiles.html
 
-recursive-include src/cordada *.css
-recursive-include src/cordada *.js
-recursive-include src/cordada *.map
-recursive-include src/cordada *.py
+recursive-include src/cordada/django_bootstrap *.css
+recursive-include src/cordada/django_bootstrap *.js
+recursive-include src/cordada/django_bootstrap *.map
+recursive-include src/cordada/django_bootstrap *.py
