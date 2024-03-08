@@ -15,7 +15,7 @@ clean: ## Delete temporary files, logs, cached files, build artifacts, etc.
 
 	$(RM) -r build
 	$(RM) -r dist
-	$(RM) -r *.egg-info
+	find . -iname '*.egg-info' -type d -prune -exec $(RM) -r {} \;
 
 .PHONY: build
 build: ## Build Python package
