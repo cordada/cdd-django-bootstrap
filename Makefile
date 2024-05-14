@@ -1,6 +1,7 @@
 SHELL = /usr/bin/env bash -e -o pipefail
 
 PYTHON = python3
+NODEJS_NPM = npm
 
 .DEFAULT_GOAL := help
 
@@ -17,9 +18,17 @@ clean: ## Delete temporary files, logs, cached files, build artifacts, etc.
 	$(RM) -r dist
 	find . -iname '*.egg-info' -type d -prune -exec $(RM) -r {} \;
 
+	find . -iname node_modules -type d -prune -exec $(RM) -r {} \;
+
 .PHONY: build
 build: ## Build Python package
+build: build-scss
 	$(PYTHON) setup.py build
+
+.PHONY: build-scss
+build-scss: ## Build CSS from SCSS using Sass
+	$(NODEJS_NPM) install
+	$(NODEJS_NPM) run-script build
 
 .PHONY: dist
 dist: build
