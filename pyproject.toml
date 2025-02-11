@@ -18,7 +18,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "cordada-django-bootstrap"
 version = "5.0.0-dev+src.bootstrap.5.0.1"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 authors = [
   {name = "Cordada", email = "no-reply@cordada.com"},
 ]
@@ -33,7 +33,6 @@ classifiers = [
   "Natural Language :: English",
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
 ]
