@@ -1,0 +1,51 @@
+# Python Project Configuration
+#
+# Documentation:
+# - https://packaging.python.org/en/latest/specifications/pyproject-toml/
+#   (https://github.com/pypa/packaging.python.org/blob/caa20073/source/specifications/pyproject-toml.rst)
+# - https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/
+#   (https://github.com/pypa/pip/blob/24.2/docs/html/reference/build-system/pyproject-toml.md)
+# - https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+#   (https://github.com/pypa/setuptools/blob/v70.3.0/docs/userguide/pyproject_config.rst)
+
+[build-system]
+requires = [
+  "setuptools==75.3.0",
+  "wheel==0.45.1",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cordada-django-bootstrap"
+version = "5.0.0-dev+src.bootstrap.5.0.1"
+requires-python = ">=3.8"
+authors = [
+  {name = "Cordada", email = "no-reply@cordada.com"},
+]
+description = "A library that packages the Bootstrap web framework as a Django application."
+license = {text = "MIT"}
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Framework :: Django",
+  "Framework :: Django :: 3.1",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+]
+dynamic = []
+
+[project.urls]
+Homepage = "https://github.com/cordada/cdd-django-bootstrap/"
+
+[tool.setuptools]
+include-package-data = true
+zip-safe = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*"]
+exclude = []
+namespaces = true
